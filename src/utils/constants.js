@@ -1,8 +1,6 @@
-
+import { SERVER_IP_URL } from '@env'
  
- const SERVER_IP = "titodev-serverchat-appmobile-production.up.railway.app"; 
-
- console.log(SERVER_IP);
+ const SERVER_IP = SERVER_IP_URL; 
 
 
  export const ENV = {
