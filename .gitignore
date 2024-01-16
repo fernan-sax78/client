@@ -8,8 +8,8 @@ node_modules/
 dist/
 web-build/
 
-#Constants
-src/utils/constants
+# Constants
+src/utils/
 
 # Native
 *.orig.*
