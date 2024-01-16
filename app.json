@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "client",
+    "name": "KnockAndChatApp",
     "slug": "client",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,16 +15,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fernansax78.client-chat"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.fernansax78.client_side_chatapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4a0a40d1-8cac-458a-8380-1e3a822edaa2"
+      }
     }
   }
 }
