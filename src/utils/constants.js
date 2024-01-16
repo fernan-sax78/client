@@ -1,4 +1,8 @@
+
+ 
  const SERVER_IP = "titodev-serverchat-appmobile-production.up.railway.app"; 
+
+ console.log(SERVER_IP);
 
 
  export const ENV = {
