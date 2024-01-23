@@ -74,13 +74,13 @@ export function ChatForm(props) {
        
 
       <View style = {styles.inputContainer}>
-        <Input 
+        <TextInput 
         placeholder='Send Message'
         style = {styles.input}
         value={formik.values.message}
         variant="unstyled"
         onChangeText={(text) => formik.setFieldValue("message" , text)}
-        onEndEditing={!formik.isSubmitting && formik.handleSubmit}
+        onEndEditing={() => !formik.isSubmitting && formik.handleSubmit}
         />
         <IconButton 
         icon={<Icon as={MaterialCommunityIcons} name = "send"/>}

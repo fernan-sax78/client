@@ -23,9 +23,9 @@ export function ItemText(props) {
         {messages.user.email.substring( 0 , 2 ).toUpperCase()}
       </Avatar>
       ) : (
-        <Avatar style = {Platform.OS === "ios" ? styles.MeMesg : styles.avatarMesgAndroid} source={{uri : messages.user.avatar && `${ENV.BASE_PATH}/${messages.user.avatar}`}}>
+/*         <Avatar style = {Platform.OS === "ios" ? styles.MeMesg : styles.avatarMesgAndroid} source={{uri : messages.user.avatar && `${ENV.BASE_PATH}/${messages.user.avatar}`}}>
             {messages.user.email.substring( 0 , 2 ).toUpperCase()}
-        </Avatar>
+        </Avatar> */null
       ) }
 
      <View style = {styles.message}>

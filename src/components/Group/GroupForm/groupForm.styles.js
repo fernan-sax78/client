@@ -26,6 +26,7 @@ export const styles = new StyleSheet.create({
         fontSize : 16 ,
         borderRadius : 50 ,
         marginLeft : 15 , 
+        padding : 8
      },
      iconSend : {
         position : "absolute",

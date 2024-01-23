@@ -1,5 +1,5 @@
 import { useState , useEffect } from 'react';
-import { View, Keyboard } from 'react-native';
+import { View, Keyboard , TextInput} from 'react-native';
 import { Input , IconButton , Icon } from 'native-base';
 import { styles } from './groupForm.styles';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -68,13 +68,13 @@ const { accessToken } = useAuth();
        <SendMedia groupId = {groupId}/>  
 
        <View style = {styles.inputContainer}>
-        <Input 
+        <TextInput 
         placeholder='Send Message'
         style = {styles.input}
         value= {formik.values.message}
         variant= "unstyled"
         onChangeText={(text) => formik.setFieldValue("message" , text)}
-        onEndEditing={!formik.isSubmitting && formik.handleSubmit}
+        onEndEditing={() => !formik.isSubmitting && formik.handleSubmit}
         />
         <IconButton 
          icon={<Icon as={MaterialCommunityIcons} name = "send"/>}
