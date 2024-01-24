@@ -1,6 +1,6 @@
 import { useState , useEffect } from 'react';
 import { SafeAreaView, Text , Pressable  } from 'react-native';
-import { IconButton , ChevronLeftIcon , Avatar, View } from 'native-base';
+import { IconButton , /* ChevronLeftIcon , */  ArrowBackIcon , Avatar, View } from 'native-base';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { styles } from './headerGroup.styles';
@@ -43,7 +43,7 @@ export function HeaderGroup(props) {
       <View style = {styles.content}>
         <View style = {styles.info}>
           <IconButton 
-          icon={<ChevronLeftIcon />}
+          icon={<ArrowBackIcon />}
           padding={0}
           onPress={navigation.goBack}
           />

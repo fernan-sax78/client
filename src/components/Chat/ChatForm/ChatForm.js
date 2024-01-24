@@ -29,9 +29,14 @@ export function ChatForm(props) {
         
         const { startCoordinates  } = e ;
 
+        //console.log(startCoordinates);
+
         if (Platform.OS === "ios") {
 
-        setKeyBoardHeight(startCoordinates.height + 65 ); 
+        if (startCoordinates.height === 243) setKeyBoardHeight( startCoordinates.height + 65 ); 
+        if (startCoordinates.height === 395 ) setKeyBoardHeight( startCoordinates.height - 85 ); 
+        if (startCoordinates.height === 346 ) setKeyBoardHeight( startCoordinates.height + 15 );
+        if ( startCoordinates.height === 394 ) setKeyBoardHeight( startCoordinates.height - 35 );
 
         }
 
@@ -69,7 +74,7 @@ export function ChatForm(props) {
     <View style = {[styles.content , {bottom : keyBoardHeight}]}>
 
       
-      <SendMedia chatId = { chatId }/>
+      <SendMedia chatId = { chatId } />
 
        
 

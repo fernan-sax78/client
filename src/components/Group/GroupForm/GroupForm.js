@@ -17,23 +17,26 @@ export function GroupForm(props) {
 
 const { groupId } = props;
 
-const [keyboardHeight, setKeyboardHeight] = useState(0);
+const [keyboardHeight, setKeyBoardHeight] = useState(0);
 const { accessToken } = useAuth();    
 
 
     useEffect(() => {
        const showKeyBoardSub = Keyboard.addListener("keyboardDidShow" , (e) => {
-          const { startCoordinates } = e ; 
+       const { startCoordinates } = e ; 
 
         if (Platform.OS === "ios") {
 
-        setKeyboardHeight(startCoordinates.height + 65 ); 
+        if (startCoordinates.height === 243) setKeyBoardHeight( startCoordinates.height + 65 ); 
+        if (startCoordinates.height === 395 ) setKeyBoardHeight( startCoordinates.height - 85 ); 
+        if (startCoordinates.height === 346 ) setKeyBoardHeight( startCoordinates.height + 15 );
+        if ( startCoordinates.height === 394 ) setKeyBoardHeight( startCoordinates.height - 35 );
 
         }
        });
 
        const hideKeyBoardSub = Keyboard.addListener("keyboardDidHide" , () => {
-         setKeyboardHeight(0);
+         setKeyBoardHeight(0);
        })
 
        return () => {
@@ -52,7 +55,7 @@ const { accessToken } = useAuth();
         onSubmit : async (formValue) => {
             try {
               await groupMessageCtrl.sendTextGroup( accessToken , groupId , formValue.message );
-              setKeyboardHeight(0);
+              setKeyBoardHeight(0);
               Keyboard.dismiss();
 
 

@@ -1,4 +1,4 @@
-import { ChevronLeftIcon , IconButton } from 'native-base'
+import { /* ChevronLeftIcon , */ IconButton  , ArrowBackIcon} from 'native-base'
 import { useNavigation } from '@react-navigation/native';
 
 export function IconBack() {
@@ -6,7 +6,7 @@ export function IconBack() {
 
   return (
     <IconButton 
-    icon = {<ChevronLeftIcon />}
+    icon = {<ArrowBackIcon />}
     padding = {0} 
     onPress = {navigation.goBack}   
     />

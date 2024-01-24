@@ -19,6 +19,8 @@ export function ChatsScreen() {
   const [chatsResult, setChatsResult] = useState(null);
   const [reload, setReload] = useState(false);
 
+  
+
   const onReload = () => setReload((prevState) => !prevState)
 
   useEffect(() => {
@@ -50,10 +52,12 @@ export function ChatsScreen() {
     
   );
 
+
   const upTopChat = (chatId) => {
     const data = chatsResult;
   
-    const fromIndex = data.map(chat => chat._id).indexOf(chatId);
+    const fromIndex = data.map((chat) => chat._id).indexOf(chatId);
+    
     const toIndex = 0;
     const element = data.splice(fromIndex , 1)[0];
     data.splice(toIndex , 0 , element);

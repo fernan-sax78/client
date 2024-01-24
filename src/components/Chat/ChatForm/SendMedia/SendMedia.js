@@ -3,6 +3,7 @@ import { IconButton , AddIcon , Actionsheet } from 'native-base';
 import { styles } from './SendMedia.styles';
 import { GalleryOptions , CameraOption } from './Options';
 import { useAuth } from '../../../../hooks';
+import { Keyboard } from 'react-native';
 
 
 
@@ -11,7 +12,11 @@ export function SendMedia(props) {
     const [show, setShow] = useState(false);
     const { accessToken } = useAuth();
 
-    const onOpenClose = () => setShow((prevState) => !prevState);
+    const onOpenClose = () => {
+      setShow((prevState) => !prevState)
+      Keyboard.dismiss();
+    };
+      
   return (
     <>
       <IconButton 

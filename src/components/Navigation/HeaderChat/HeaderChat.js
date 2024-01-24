@@ -2,7 +2,7 @@ import { useState , useEffect } from 'react';
 import { ENV } from '../../../utils';
 import { View, Text , SafeAreaView , Pressable } from 'react-native';
 import { styles } from './headerChat.styles';
-import { IconButton , ChevronLeftIcon , Avatar } from 'native-base';
+import { IconButton , /* ChevronLeftIcon , */  Avatar , ArrowBackIcon } from 'native-base';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -63,7 +63,7 @@ const goToUserProfile = () => {
       <View style = {styles.content}>
         <View style = {styles.info}>
           <IconButton 
-          icon={<ChevronLeftIcon />}  
+          icon={<ArrowBackIcon />}  
           padding={0} 
           onPress={navigation.goBack}
           />
